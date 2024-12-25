@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Christmas Gift</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/papercss/dist/paper.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -58,53 +61,9 @@
                                 ride, now and always. <br><br> With love, Jaime </p>
                         </div>
                     </section>
-
-
-                    <section class="carousel" aria-label="Gallery" style="display: none;">
-                        <ol class="carousel__viewport">
-                            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper">
-                                    <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
-                                    <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
-                                </div>
-                            </li>
-                            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div>
-                                <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
-                                <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
-                            </li>
-                            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div>
-                                <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
-                                <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
-                            </li>
-                            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div>
-                                <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
-                                <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
-                            </li>
-                        </ol>
-                        <aside class="carousel__navigation">
-                            <ol class="carousel__navigation-list">
-                                <li class="carousel__navigation-item">
-                                    <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
-                                </li>
-                                <li class="carousel__navigation-item">
-                                    <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
-                                </li>
-                                <li class="carousel__navigation-item">
-                                    <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
-                                </li>
-                                <li class="carousel__navigation-item">
-                                    <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
-                                </li>
-                            </ol>
-                        </aside>
-                    </section>
-
                     <section class="padding">
                         <h4>Everyday Gifts– I Receive From You And I love Above All Else</h4>
-                        <div class="gallery">
+                        <div id="gifts-gallery" class="gallery" style="text-align: center;">
                             <div class="border padding">
                                 <h5>Your Smile</h5>
                                 <p> Your smile lights up the room and my heart. </p>
@@ -150,17 +109,17 @@
                                 <p> Our experiences together are just amazing. You know it when I say if it was not for
                                     you I would not have done it. I would have probably stayed in my comfort zone (home,
                                     programming, etc...) </p>
-                                <img src="assets/images/gifts/moulin-rouge-experience.JPG" class="float-left">
                                 <img src="assets/images/gifts/multicolor-shadow.jpg" class="float-left">
-                                <img src="assets/images/gifts/hope.jpg" class="float-left">
-                                <img src="assets/images/gifts/silly-faces.jpg" class="float-left">
-                                <img src="assets/images/gifts/your-lovely-company.jpg" class="float-left">
                             </div>
                         </div>
                         <h4>Extras</h4>
-                        <div class="gallery">
+                        <div id="extras-gallery" class="gallery">
                             <img src="assets/images/i-love-ny.png">
                             <img src="assets/images/lets-get-fit-1.jpg">
+                            <img src="assets/images/gifts/moulin-rouge-experience.JPG" class="float-left">
+                            <img src="assets/images/gifts/hope.jpg" class="float-left">
+                            <img src="assets/images/gifts/silly-faces.jpg" class="float-left">
+                            <img src="assets/images/gifts/your-lovely-company.jpg" class="float-left">
                             <img src="assets/images/family-fresh-in-munich.jpg">
                             <img src="assets/images/lu-in-ny.jpg">
                             <img src="assets/images/then-back-to-ny-again.jpg">
@@ -187,6 +146,36 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#extras-gallery').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            });
+
+            $('#gifts-gallery').slick({
+                // dots: true,
+                infinite: true,
+                // speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>
