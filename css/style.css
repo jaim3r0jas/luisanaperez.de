@@ -4,8 +4,9 @@
     gap: 10px;
 }
 .gallery img {
-    width: auto;
-    height: 300px;
+    /* width: 100%; */
+    /* width: auto; */
+    /* height: 300px; */
     border-radius: 5px;
 }
 
