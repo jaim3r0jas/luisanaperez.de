@@ -1,197 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Christmas Gift</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/papercss/dist/paper.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Happy 41st Birthday Lu</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("img/stpatricks-repeating.jpg");
+            background-size: 700px;
+            opacity: 0.95;
+        }
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        /* Letter style as a floating div similar to paper size in the middle of the screen with adaptative size */
+        .letter {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 1200px;
+            max-height: 1200px;
+            overflow: auto;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="row flex-center">
-        <div class="md-12 lg-8 col">
-            <div class="paper">
-                <header class="border border-4">
-                    <h1 class="text-center">Para Luisana Perez</h1>
-                    <h4 class="text-center">A Christmas Gift</h4>
-                </header>
-                <main>
-                    <section class="padding">
-                        <h2>Our Journey</h2>
-                        <p> We’ve come a long way since September 17th, 2016. Through lots of fun, losing dear family,
-                            several moves, new family (our twins), and many (bold) challenges, we’ve grown stronger
-                            together (that's the truth). This is my gift to you, I've chosen to do something with what I
-                            know (software engineering) to give you a little piece of something I like to think I do
-                            well, and surely enjoy. But this gift is tribute to you, a testament of the great things you
-                            do, and as a side gig it also celebrates your favorite city. </p>
-                        <h4>What does this Gift includes?</h4>
-                        <ul>
-                            <li>Domain: luisanaperez.de</li>
-                            <li>Custom Christmas Gift Website (this page)</li>
-                            <li>Personalized Letter</li>
-                            <li>Gallery of Everyday Gifts</li>
-                            <li>Digital Pixel Art of your favorite City in the World</li>
-                            <li style="font-weight: bold;">Bonus: custom domain email setup (on-demand)</li>
-                        </ul>
-                    </section>
-                    <section class="padding">
-                        <h3>The Letter</h3>
-                        <div class="border border-2 padding">
-                            <p> Hi there Chula, <br><br> Merry Christmas! I hope this letter finds you well and happy. I
-                                wanted to give you something special this year, something that would remind you of the
-                                city that’s always held a special place in your heart even before you visited it for the
-                                first time. <br><br> New York has always been the one— a place full of energy, dreams,
-                                endless possibilities, and of course fashion. Over the years, it has become a little
-                                piece of our story too. <br><br> Since 2013, we’ve built something incredible. Not just
-                                a marriage but a family, a home, and a bond that, has endured everything life has thrown
-                                at us and your strength, belief and true love has been the glue that has kept us
-                                together. <br><br> From our twins filling the house with laughter (and chaos!) to moving
-                                countries, packing boxes, and unpacking dreams, our journey has been anything but
-                                ordinary. Through it all, one thing has remained: my unwavering love and respect for
-                                you. <br><br> This gift is a small reminder of the big promise I made to you: to always
-                                work for your happiness, to listen to your dreams, and to hold your hand through every
-                                adventure and every challenge. <br><br> Here’s to us, to the love that keeps growing,
-                                and to the dreams we’re yet to chase (including traveling to NY). I’m in for the long
-                                ride, now and always. <br><br> With love, Jaime </p>
-                        </div>
-                    </section>
-                    <section class="padding">
-                        <h3>Everyday Gifts I Receive From You And I love Above All Else</h3>
-                        <div id="gifts-gallery" class="gallery" style="text-align: center;">
-                            <div class="padding float-left">
-                                <h4>Your Smile</h4>
-                                <p> Your smile lights up the room and my heart. </p>
-                                <img src="assets/images/gifts/your-perfect-smile.jpg">
-                            </div>
-                            <div class="padding float-left">
-                                <h4>Your Love</h4>
-                                <p> Your love is the foundation of our family and my life. </p>
-                                <img src="assets/images/gifts/fun-love.jpg">
-                            </div>
-                            <div class="padding float-left">
-                                <h4>Your Strength and Discipline</h4>
-                                <p> Your strength and discipline inspire me to be a better. </p>
-                                <img src="assets/images/lets-get-fit-2.jpg">
-                            </div>
-                            <div class="padding float-left">
-                                <h4>Our Twins</h4>
-                                <p> Tu sabes que no es un cachú, pero no hay mayor felicidad y mejor regalo que la
-                                    oportunidad de ser su padre... What is more, is the opportunity to raise them with
-                                    you. <3 </p>
-                                        <img src="assets/images/gifts/my-1st-bday-with-babies.jpg">
-                            </div>
-                            <div class="padding float-left">
-                                <h4>Our Daughter</h4>
-                                <p> Noelle is such a sweet, mature little girl, curious and full of love. </p>
-                                <p style="font-size: 14px">Noelle would say "What??"</p>
-                                <img src="assets/images/lu-and-noelle.jpeg">
-                            </div>
-                            <div class="padding float-left">
-                                <h4>Our Son</h4>
-                                <p> Jose is such a happy boy, and he loves you so much. He is always looking for you.
-                                </p>
-                                <p style="font-size: 14px">Jose would say "I loove it..."</p>
-                                <img src="assets/images/gifts/jose.jpg">
-                            </div>
-                            <div class="padding float-left">
-                                <h4>Your Support</h4>
-                                <p> Your support is my rock, my safe place, and my home. </p>
-                                <img src="assets/images/gifts/support.jpg">
-                            </div>
-                            <div class="padding">
-                                <h4>Experiences</h4>
-                                <p> Our experiences together are just amazing. You know it when I say if it was not for
-                                    you I would not have done it. I would have probably stayed in my comfort zone (home,
-                                    programming, etc...) </p>
-                                <img src="assets/images/gifts/multicolor-shadow.jpg">
-                            </div>
-                        </div>
-                    </section>
-                </main>
-            </div>
-        </div>
+    <div class="letter">
+        <p id="letter"><!-- Letter content will be written here --></p>
 
-        <div class="md-12 lg-4 col">
-            <div class="paper">
-                <section class=" text-center padding">
-                    <h3>Extras</h3>
-                    <div id="extras-gallery" class="gallery">
-                        <img src="assets/images/i-love-ny.png">
-                        <img src="assets/images/gifts/moulin-rouge-experience.JPG">
-                        <img src="assets/images/gifts/hope.jpg">
-                        <img src="assets/images/gifts/silly-faces.jpg">
-                        <img src="assets/images/gifts/your-lovely-company.jpg">
-                        <img src="assets/images/family-fresh-in-munich.jpg">
-                        <img src="assets/images/lu-in-ny.jpg">
-                        <img src="assets/images/then-back-to-ny-again.jpg">
-                        <img src="assets/images/lets-get-fit-1.jpg">
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="md-12 col">
-            <div class="paper">
-                <footer class="text-center padding">
-                    <h1>Thank You!</h1>
-                    <h3>With love, always - Jaime</h3>
-                    <p>
-                        P.D. I hope you enjoy this gift. I love you.
-                        <3 <br /><br />
-                        Below is a Pixel Art portrait of New York City, I hope when you see it serves as reminder that:
-                        I see you, I see your dreams, and I will work to make them true. Enjoy! 👇
-                    </p>
-
-                    <img class="no-border" src="assets/images/ny-art-2.png" alt="Pixel Art of New York City by eBoy">
-                    <br />
-                    <button class="btn-small"
-                        onclick="document.getElementById('surprise').style.visibility = 'visible'"> Click Here!
-                    </button>
-                    <br /><br />
-                    <input class="alert-state" id="alert-4" type="checkbox">
-                    <div id="surprise" class="alert alert-warning dismissible" style="visibility: hidden">
-                        Please, go now to the keller for the last surprise (Gift) of the day. 😉
-                        <label class="btn-close" for="alert-4">X</label>
-                    </div>
-                </footer>
-            </div>
-        </div>
+        <img style="display: none; position: fixed; top: 0; left: 0; width: 95%; height: 100%;" src="img/stpatricks-2024.jpg" alt="Lu's 40th Birthday Party">
     </div>
+    <script src="js/typewritter.js"></script>
+    <script src="js/tsparticles.confetti.js"></script>
+    <script>
+        var app = document.querySelector('#letter');
+        var typewriter = new Typewriter(app, {
+            loop: false,
+            delay: 75,
+            cursor: '_',
+        });
+        typewriter
+            .typeString('March 17th, 2025.')
+            .pauseFor(600)
+            .typeString('<br>')
+            .pauseFor(600)
+            .typeString('Subject: <strong>41st Birthday Letter for the love of my life.</strong>')
+            .typeString('<br>')
+            .pauseFor(600)
+            .typeString('<br>')
+            .typeString('<strong>To:</strong> <br> ')
+            .typeString('>     Luisana P. Perez Rivas<br> ')
+            .typeString('>     Franz-Heub')
+            .pauseFor(500)
+            .deleteChars(10)
+            .pauseFor(500)
+            .typeString('*****-*****-***. **,<br> ')
+            .typeString('>     ***** ******, G*****y<br><br><br> ')
+            .pauseFor(600)
+            .typeString('<strong>From: </strong><br>')
+            .typeString('>     Jaime E. Rojas Almonte<br> ')
+            .typeString('>     *****-*****-***. **,<br> ')
+            .typeString('>     ***** ******, G*****y<br><br><br> ')
+            .pauseFor(1000)
+            .typeString('Dear Lu, ')
+            .pauseFor(1500)
+            .typeString('<strong>Happy Nappy Birthday! :P </strong><br>')
+            .pauseFor(1000)
+            .typeString('<br>')
+            .pauseFor(1500)
+            .typeString('First of all, I want to remind you that I am committed to keep working on myself and our relationship. <br><br>')
+            .pauseFor(500)
+            .typeString('I am so grateful for you, ... ')
+            .pauseFor(1500)
+            .typeString('I appreciate the love you bring to my life. ')
+            .pauseFor(1000)
+            .typeString('I can see that love in your smile... ')
+            .pauseFor(1000)
+            .typeString('in your eyes... ')
+            .pauseFor(1000)
+            .typeString('in your touch... ')
+            .pauseFor(1000)
+            .typeString('in your kisses... ')
+            .pauseFor(1000)
+            .typeString('in also your words (yep right there too)... ')
+            .pauseFor(1000)
+            .typeString('and in your actions (of course). <br><br>')
+            .pauseFor(1000)
+            .typeString('But that smile, is a smile I so much look forward to see... ')
+            .pauseFor(1500)
+            .typeString('<strong>every day... </strong>')
+            .pauseFor(1500)
+            .typeString('and I am lucky to have it every now and then, in the most beautiful form. <br><br>')
+            .pauseFor(1500)
+            .typeString('I am thankful for the support you provide, and the patience you have with me... ')
+            .pauseFor(1500)
+            .typeString('Believe me, I know it takes courage and will power; ')
+            .pauseFor(700)
+            .typeString('I am nothing but lucky that you choose me, and to keep you in the boat I will do anything. <br><br>')
+            .pauseFor(1500)
+            .typeString('Furthermore, I am so proud of the notable efforts you are putting into becoming a better person and an A-list professional. <br><br>')
+            .pauseFor(800)
+            .typeString('Congratulations in advance for your next big step, whenever it comes... ')
+            .pauseFor(600)
+            .typeString('<strong>But rest assured, it will.</strong><br><br>')
+            .pauseFor(1500)
+            .typeString('I look forward to your success, ')
+            .pauseFor(700)
+            .typeString('and ways in which I can support you.</strong> <br><br>')
+            .pauseFor(1500)
+            .typeString('<strong>I love you so much!<br><br> </strong>')
+            .pauseFor(1000)
+            .typeString('Let\'s have fun tonight, <br> <strong>Hummus</strong>, wine, and a dinner?<br><br>')
+            .pauseFor(1500)
+            .typeString('<button id="confetti" onclick="celebrate()">Click to Start the Party Now!</button> <strong> ;)</strong>')
+            .pauseFor(1500)
+            .stop()
+            .start();
 
-    <script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript">
-        // $(document).ready(function () {
-        //     $('#extras-gallery').slick({
-        //         infinite: true,
-        //         slidesToShow: 2,
-        //         slidesToScroll: 2
-        //     });
+        function celebrate() {
+            const img = document.querySelector('img');
+            img.style.display = 'block';
 
-        //     $('#gifts-gallery').slick({
-        //         // dots: true,
-        //         infinite: true,
-        //         // speed: 300,
-        //         slidesToShow: 2,
-        //         slidesToScroll: 2,
-        //         responsive: [
-        //             {
-        //                 breakpoint: 1024,
-        //                 settings: {
-        //                     slidesToShow: 1,
-        //                     slidesToScroll: 1
-        //                 }
-        //             }
-        //         ]
-        //     });
-        // });
+            const duration = 15 * 1000,
+                animationEnd = Date.now() + duration,
+                defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+
+                // since particles fall down, start a bit higher than random
+                confetti(
+                    Object.assign({}, defaults, {
+                        particleCount,
+                        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                    })
+                );
+                confetti(
+                    Object.assign({}, defaults, {
+                        particleCount,
+                        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                    })
+                );
+            }, 250);
+        }
     </script>
 </body>
 
