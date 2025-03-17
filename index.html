@@ -16,32 +16,46 @@
             background-size: 700px;
         }
 
-        /* Letter style as a floating div similar to paper size in the middle of the screen with adaptative size */
+        /* Notebook-style letter */
         .letter {
-            background-color: white;
-            padding: 20px;
+            background:
+                linear-gradient(to right, red 2px, transparent 2px) no-repeat,
+                /* Red margin line */
+                linear-gradient(white 97%, rgba(0, 0, 0, 1) 3%) repeat-y;
+            /* Lined paper effect */
+            background-size: 50px 100%, 100% 30px;
+            /* Red line width + full height, Lines height */
+            background-position: 60px 0, 0 0;
+            /* Red line at 40px from the left */
+            background-attachment: local, local;
+            /* Make both the red line & lines scroll */
+            padding: 40px 30px;
+            padding-left: 75px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 90%;
-            width: 1200px;
-            max-height: 1200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            min-height: 80%;
+            max-height: 80vh;
             overflow: auto;
+            position: relative;
+            line-height: 30px;
         }
 
         button {
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
+            margin-top: 20px;
             cursor: pointer;
+            border-radius: 5px;
         }
 
-        img {
+        .thisisus {
             display: none;
             border-radius: 10px;
             width: 50%;
@@ -57,8 +71,7 @@
     <div class="letter">
         <p id="letter"><!-- Letter content will be written here --></p>
 
-        <img src="img/stpatricks-2024.jpg"
-            alt="Lu's 40th Birthday Party">
+        <img class="thisisus" src="img/stpatricks-2024.jpg" alt="Lu's 40th Birthday Party">
     </div>
     <script src="js/typewritter.js"></script>
     <script src="js/tsparticles.confetti.js"></script>
@@ -71,85 +84,110 @@
         });
         typewriter
             .typeString('March 17th, 2025.')
-            .pauseFor(600)
+            .pauseFor(800)
             .typeString('<br>')
-            .pauseFor(600)
+            .pauseFor(800)
             .typeString('Subject: <strong>41st Birthday Letter for the love of my life.</strong>')
             .typeString('<br>')
-            .pauseFor(600)
+            .pauseFor(800)
             .typeString('<br>')
-            .typeString('<strong>To:</strong> <br> ')
-            .typeString('>     Luisana P. Perez Rivas<br> ')
-            .typeString('>     Franz-Heub')
-            .pauseFor(500)
-            .deleteChars(10)
-            .pauseFor(500)
-            .typeString('*****-*****-***. **,<br> ')
-            .typeString('>     ***** ******, G*****y<br><br><br> ')
-            .pauseFor(600)
-            .typeString('<strong>From: </strong><br>')
-            .typeString('>     Jaime E. Rojas Almonte<br> ')
-            .typeString('>     *****-*****-***. **,<br> ')
-            .typeString('>     ***** ******, G*****y<br><br><br> ')
-            .pauseFor(1000)
+            .typeString('<strong>To:</strong>  Luisana P. Perez Rivas<br> ')
+            .typeString('<strong>From: </strong>  Jaime E. Rojas Almonte<br><br> ')
+            .pauseFor(800)
             .typeString('Dear Lu, ')
-            .pauseFor(1500)
+            .pauseFor(800)
             .typeString('<strong>Happy Nappy Birthday! :P </strong><br>')
-            .pauseFor(1000)
+            .pauseFor(800)
+            .callFunction(scrollToBottom)
             .typeString('<br>')
-            .pauseFor(1500)
+            .pauseFor(800)
             .typeString('First of all, I want to remind you that I am committed to keep working on myself and our relationship. <br><br>')
-            .pauseFor(500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('I am so grateful for you, ... ')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('I appreciate the love you bring to my life. ')
-            .pauseFor(1000)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('I can see that love in your smile... ')
-            .pauseFor(1000)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('in your eyes... ')
-            .pauseFor(1000)
+            .pauseFor(800)
             .typeString('in your touch... ')
-            .pauseFor(1000)
+            .pauseFor(800)
             .typeString('in your kisses... ')
-            .pauseFor(1000)
+            .pauseFor(800)
             .typeString('in also your words (yep right there too)... ')
-            .pauseFor(1000)
+            .pauseFor(800)
             .typeString('and in your actions (of course). <br><br>')
-            .pauseFor(1000)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('But that smile, is a smile I so much look forward to see... ')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('<strong>every day... </strong>')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('and I am lucky to have it every now and then, in the most beautiful form. <br><br>')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('I am thankful for the support you provide, and the patience you have with me... ')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('Believe me, I know it takes courage and will power; ')
-            .pauseFor(700)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('I am nothing but lucky that you choose me, and to keep you in the boat I will do anything. <br><br>')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('Furthermore, I am so proud of the notable efforts you are putting into becoming a better person and an A-list professional. <br><br>')
+            .callFunction(scrollToBottom)
             .pauseFor(800)
             .typeString('Congratulations in advance for your next big step, whenever it comes... ')
-            .pauseFor(600)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('<strong>But rest assured, it will.</strong><br><br>')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('I look forward to your success, ')
-            .pauseFor(700)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('and ways in which I can support you.</strong> <br><br>')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('<strong>I love you so much!<br><br> </strong>')
-            .pauseFor(1000)
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
             .typeString('Let\'s have fun tonight, <br> <strong>Hummus</strong>, wine, and a dinner?<br><br>')
-            .pauseFor(1500)
-            .typeString('<button id="confetti" onclick="celebrate()">Click to Start the Party Now!</button> <strong> ;)</strong>')
-            .pauseFor(1500)
+            .callFunction(scrollToBottom)
+            .pauseFor(3000)
+            .callFunction(showPartyButton)
+            .callFunction(scrollToBottom)
             .stop()
             .start();
 
+        function scrollToBottom() {
+            var letterDiv = document.querySelector('.letter');
+            letterDiv.scrollTop = letterDiv.scrollHeight;
+        }
+
+        function showPartyButton() {
+            const typewritterCursor = document.querySelector('.Typewriter__cursor');
+            const partyBtn = document.createElement('button')
+            partyBtn.id = 'confetti';
+            partyBtn.innerHTML = 'Click to Start the Party Now! ;)';
+            partyBtn.onclick = celebrate;
+            typewritterCursor.parentElement.insertBefore(partyBtn, typewritterCursor);
+        }
+
         function celebrate() {
-            const img = document.querySelector('img');
-            img.style.display = 'block';
+
+            const thisisus = document.querySelector('.thisisus');
+            thisisus.style.display = 'block';
+
+            scrollToBottom();
 
             const duration = 15 * 1000,
                 animationEnd = Date.now() + duration,
