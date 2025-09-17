@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy 41st Birthday Lu</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("img/stpatricks-repeating.jpg");
+            background-size: 700px;
+        }
+
+        /* Notebook-style letter */
+        .letter {
+            background:
+                linear-gradient(to right, red 2px, transparent 2px) no-repeat,
+                /* Red margin line */
+                linear-gradient(white 97%, rgba(0, 0, 0, 1) 3%) repeat-y;
+            /* Lined paper effect */
+            background-size: 50px 100%, 100% 30px;
+            /* Red line width + full height, Lines height */
+            background-position: 60px 0, 0 0;
+            /* Red line at 40px from the left */
+            background-attachment: local, local;
+            /* Make both the red line & lines scroll */
+            padding: 40px 30px;
+            padding-left: 75px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            min-height: 80%;
+            max-height: 80vh;
+            overflow: auto;
+            position: relative;
+            line-height: 30px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .thisisus {
+            display: none;
+            border-radius: 10px;
+            width: 50%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 8px -3px, rgba(0, 0, 0, 0.12) 0px 4px 6px -2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="letter">
+        <p id="letter"><!-- Letter content will be written here --></p>
+
+        <img class="thisisus" src="img/stpatricks-2024.jpg" alt="Lu's 40th Birthday Party">
+    </div>
+    <script src="js/typewritter.js"></script>
+    <script src="js/tsparticles.confetti.js"></script>
+    <script>
+        var app = document.querySelector('#letter');
+        var typewriter = new Typewriter(app, {
+            loop: false,
+            delay: 75,
+            cursor: '_',
+        });
+        typewriter
+            .typeString('March 17th, 2025.')
+            .pauseFor(800)
+            .typeString('<br>')
+            .pauseFor(800)
+            .typeString('Subject: <strong>41st Birthday Letter for the love of my life.</strong>')
+            .typeString('<br>')
+            .pauseFor(800)
+            .typeString('<br>')
+            .typeString('<strong>To:</strong>  Luisana P. Perez Rivas<br> ')
+            .typeString('<strong>From: </strong>  Jaime E. Rojas Almonte<br><br> ')
+            .pauseFor(800)
+            .typeString('Dear Lu, ')
+            .pauseFor(800)
+            .typeString('<strong>Happy Nappy Birthday! :P </strong><br>')
+            .pauseFor(800)
+            .callFunction(scrollToBottom)
+            .typeString('<br>')
+            .pauseFor(800)
+            .typeString('First of all, I want to remind you that I am committed to keep working on myself and our relationship. <br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('I am so grateful for you, ... ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('I appreciate the love you bring to my life. ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('I can see that love in your smile... ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('in your eyes... ')
+            .pauseFor(800)
+            .typeString('in your touch... ')
+            .pauseFor(800)
+            .typeString('in your kisses... ')
+            .pauseFor(800)
+            .typeString('in also your words (yep right there too)... ')
+            .pauseFor(800)
+            .typeString('and in your actions (of course). <br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('But that smile, is a smile I so much look forward to see... ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('<strong>every day... </strong>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('and I am lucky to have it every now and then, in the most beautiful form. <br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('I am thankful for the support you provide, and the patience you have with me... ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('Believe me, I know it takes courage and will power; ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('I am nothing but lucky that you choose me, and to keep you in the boat I will do anything. <br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('Furthermore, I am so proud of the notable efforts you are putting into becoming a better person and an A-list professional. <br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('Congratulations in advance for your next big step, whenever it comes... ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('<strong>But rest assured, it will.</strong><br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('I look forward to your success, ')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('and ways in which I can support you.</strong> <br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('<strong>I love you so much!<br><br> </strong>')
+            .callFunction(scrollToBottom)
+            .pauseFor(800)
+            .typeString('Let\'s have fun tonight, <br> <strong>Hummus</strong>, wine, and a dinner?<br><br>')
+            .callFunction(scrollToBottom)
+            .pauseFor(3000)
+            .callFunction(showPartyButton)
+            .callFunction(scrollToBottom)
+            .stop()
+            .start();
+
+        function scrollToBottom() {
+            var letterDiv = document.querySelector('.letter');
+            letterDiv.scrollTop = letterDiv.scrollHeight;
+        }
+
+        function showPartyButton() {
+            const typewritterCursor = document.querySelector('.Typewriter__cursor');
+            const partyBtn = document.createElement('button')
+            partyBtn.id = 'confetti';
+            partyBtn.innerHTML = 'Click to Start the Party Now! ;)';
+            partyBtn.onclick = celebrate;
+            typewritterCursor.parentElement.insertBefore(partyBtn, typewritterCursor);
+        }
+
+        function celebrate() {
+
+            const thisisus = document.querySelector('.thisisus');
+            thisisus.style.display = 'block';
+
+            scrollToBottom();
+
+            const duration = 15 * 1000,
+                animationEnd = Date.now() + duration,
+                defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+
+                // since particles fall down, start a bit higher than random
+                confetti(
+                    Object.assign({}, defaults, {
+                        particleCount,
+                        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                    })
+                );
+                confetti(
+                    Object.assign({}, defaults, {
+                        particleCount,
+                        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                    })
+                );
+            }, 250);
+        }
+    </script>
+</body>
+
+</html>
