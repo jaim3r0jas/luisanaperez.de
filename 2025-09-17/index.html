@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chinese Proverb</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0e0e0;
+            font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+            image-rendering: pixelated;
+        }
+        .proverb-container {
+            background: #fff;
+            border: 8px solid #222;
+            border-radius: 0;
+            box-shadow: 0 0 0 8px #ffe066, 0 0 0 16px #222;
+            padding: 2.5rem 2rem;
+            max-width: 480px;
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.2s;
+            image-rendering: pixelated;
+        }
+        .proverb-text {
+            font-size: 1.1rem;
+            color: #222;
+            font-style: normal;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            letter-spacing: 0.04em;
+            text-shadow: 2px 2px 0 #ffe066, 0 0 2px #fff;
+            font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+        }
+        .proverb-author {
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #ffe066;
+            font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+        }
+        @media (max-width: 600px) {
+            .proverb-container {
+                padding: 1.5rem 0.5rem;
+                max-width: 95vw;
+            }
+            .proverb-text {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="proverb-container">
+        <div class="proverb-text">
+            "What's the point of living without a round purse?"
+        </div>
+        <div class="proverb-author">
+            – Chinese Proverb
+        </div>
+    </div>
+</body>
+</html>
