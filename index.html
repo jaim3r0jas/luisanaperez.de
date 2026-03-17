@@ -1,119 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>For You ❤️</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy 42nd Birthday Lu ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap"
       rel="stylesheet"
-      href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css"
     />
-
     <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
-        background: #fdfaf5;
+        min-height: 100vh;
+        background: #fdf0e6;
+        background-image:
+          radial-gradient(
+            ellipse at 15% 15%,
+            rgba(220, 150, 110, 0.18) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse at 85% 85%,
+            rgba(170, 80, 100, 0.12) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse at 50% 100%,
+            rgba(200, 160, 100, 0.1) 0%,
+            transparent 50%
+          );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3.5rem 1.5rem 5rem;
+        font-family: "Cormorant Garamond", Georgia, serif;
       }
+
+      .title-section {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      .ornament {
+        font-size: 1.1rem;
+        color: #c49070;
+        letter-spacing: 0.6em;
+        line-height: 1;
+      }
+
+      .birthday-title {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(3.2rem, 9vw, 6rem);
+        color: #7a2232;
+        line-height: 1.1;
+        margin: 0.6rem 0 0.3rem;
+        text-shadow: 0 2px 12px rgba(122, 34, 50, 0.12);
+      }
+
+      .date-label {
+        font-family: "Playfair Display", serif;
+        font-size: 0.95rem;
+        font-style: italic;
+        color: #9a6a50;
+        letter-spacing: 0.18em;
+        margin-top: 0.6rem;
+      }
+
       .letter {
+        background: #fffdf9;
+        border: 1px solid rgba(180, 130, 95, 0.28);
+        border-radius: 3px;
+        box-shadow:
+          0 6px 30px rgba(100, 55, 35, 0.09),
+          0 2px 6px rgba(100, 55, 35, 0.06),
+          inset 0 0 0 7px rgba(210, 170, 130, 0.06);
+        padding: clamp(2.2rem, 5vw, 4.5rem) clamp(2rem, 6vw, 5.5rem);
         max-width: 700px;
-        margin: 2rem auto;
-      }
-      audio {
         width: 100%;
-        margin-top: 1rem;
+        position: relative;
+      }
+
+      .letter::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        right: 9px;
+        bottom: 9px;
+        border: 1px solid rgba(180, 130, 95, 0.14);
+        border-radius: 1px;
+        pointer-events: none;
+      }
+
+      .salutation {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        color: #7a2232;
+        margin-bottom: 2rem;
+      }
+
+      .letter p {
+        font-size: clamp(1.15rem, 2.5vw, 1.3rem);
+        line-height: 1.95;
+        color: #2a160e;
+        margin-bottom: 1.7rem;
+      }
+
+      .letter p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .signature {
+        margin-top: 2.5rem;
+        padding-top: 1.8rem;
+        border-top: 1px solid rgba(180, 130, 95, 0.22);
+      }
+
+      .signature p {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 0.2rem !important;
+        color: #4a2a1e !important;
+      }
+
+      .sig-name {
+        font-family: "Great Vibes", cursive;
+        font-size: 2.8rem !important;
+        color: #7a2232 !important;
+        line-height: 1.2 !important;
+        margin-top: 0.3rem !important;
+      }
+
+      .footer-ornament {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.9em;
+        color: #c49070;
+        opacity: 0.6;
       }
     </style>
   </head>
-
   <body>
-    <main class="letter paper">
-
-<h2>💌 Merry Christmas My Love and Mama!</h2>
-
-      <h3>🎄 From Your Twins</h3>
-
-      <div>
-        <h4>José's Interview</h4>
-        <audio controls="" autoplay="" name="media"><source src="https://luisanaperez.de/assets/jose_christmas_2025.mp3" type="audio/mp3"></audio>
-        <p style="line-height: 1.1; font-family: monospace; white-space: pre-wrap;">
-<strong>Papa:</strong> Wait wait wait...
-<strong>Jose:</strong> A lot of unicorns.
-<strong>Papa:</strong> For mama? wishes? what else?
-<strong>Jose:</strong> Also a lot of spinosaurus, and also a lot of brachisaurus.
-<strong>Papa:</strong> Nice! And what else?
-<strong>Jose:</strong> But you know Helen loves also brachisaurus.
-<strong>Papa:</strong> Really? Hmm, and what else do you wish mama?
-<strong>Jose:</strong> Also... also... so many T-rex, and so many, one hundred spinosaurus again. 
-<strong>Papa:</strong> And... Do you love mama?
-<strong>Jose:</strong> Yes.
-<strong>Papa:</strong> How much do you love mama?
-<strong>Jose:</strong> Hmmm, ah... Hundred
-<strong>Papa:</strong> Hundred?
-<strong>Papa:</strong> Yeah! And also Noelle hundred, and also you hundred.
-<strong>Papa:</strong> Thank you! thank you! Now do you love mama so so much? Then what is your favorite thing about mama?
-<strong>Jose:</strong> Ahhm... Giving him a lot of present, and a lost of hasas, and a lot of hmmm flags of unicorns. That only.
-<strong>Papa:</strong> What does mama do that you like? What does mama do that you like very much? 
-<strong>Jose:</strong> A hand, and also a five, and alsol, and alsol, and alsol, he lets me do that this spinosaurus.
-<strong>Papa:</strong> Aaaah! And you like it when she does things with you in the table.
-<strong>Jose:</strong> Coloring only.
-<strong>Papa:</strong> What about the food that mama does? do you love mama's food? 
-<strong>Jose:</strong> What?
-<strong>Papa:</strong> When mama does food, do you love it?
-<strong>Jose:</strong> Louder?
-<strong>Papa:</strong> When mama is cooking, do you love her food?
-<strong>Jose:</strong> Yes! Also your food. 
-<strong>Papa:</strong> Ok, hahaha, thank you Jose! 
-<strong>Jose:</strong> Noelle is singing loud.
-<strong>Papa:</strong> I love you Jose, thank you! bye! bye!
-
-        </p>
-      </div>
-
-    <div>
-        <h4>Noelle's Interview</h4>
-        <audio controls="" autoplay="" name="media"><source src="https://luisanaperez.de/assets/noelle_christmas_2025.mp3" type="audio/mp3"></audio>
-        <p style="line-height: 1.1; font-family: monospace; white-space: pre-wrap;">
-<strong>Papa:</strong> I have a question for you Noelle, what are your wishes for mama for christmas?
-<strong>Noelle:</strong> A lot of unicorns. A lot of rainbows. A lot of beautiful rainbow stars. And a lot of beautiful raiiin...rainbow lollipops.
-<strong>Papa:</strong> Rainbow lollipops! And what do you think of mama?
-<strong>Noelle:</strong> So good.
-<strong>Papa:</strong> Mama is so good? And how do you feel about mama? Do you love mama?
-<strong>Noelle:</strong> Yes!
-<strong>Papa:</strong> And how much?
-<strong>Noelle:</strong> Up to the sky!
-<strong>Papa:</strong> Up to the sky?
-<strong>Noelle:</strong> Until space!
-<strong>Papa:</strong> Until space?
-<strong>Noelle:</strong> When it is on space, then I like you and mama.
-<strong>Papa:</strong> Yes?
-<strong>Noelle:</strong> I love you and mamma.
-<strong>Papa:</strong> Thank you my love! And what is your favorite thing about mama?
-<strong>Noelle:</strong> Playing the little bunny, thats over the lava and when its outside the lava, they get lost and when one choose the winner then then then they get the tap keys.
-<strong>Papa:</strong> Thats' great! Can you say "mama merry christmas?"
-<strong>Noelle:</strong> Mama merry Christmas!
-<strong>Papa:</strong> "I love you very much!"
-<strong>Noelle:</strong> I love you very much!
-<strong>Papa:</strong> Until?
-<strong>Noelle:</strong> Space!
-<strong>Papa:</strong> Until space! Good! Perfect!
-        </p>
-
+    <div class="title-section">
+      <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <h1 class="birthday-title">Happy Birthday, Lu</h1>
+      <p class="date-label">March 17th, 2026 &nbsp;·&nbsp; 42 years of you</p>
+      <div class="ornament" style="margin-top: 0.8rem">✦ &nbsp; ✦ &nbsp; ✦</div>
     </div>
-    </main>
 
-    <main class="letter paper">
-      <h2>💌 From Jaime (me)</h2>
+    <div class="letter">
+      <p class="salutation">Hey Lu,</p>
 
-    <p style="line-height: 1.1; font-family: monospace; white-space: pre-wrap;">
-Hi Love! Merry Christmas!
-
-Thank you for being the heart of this family. Thanks for sticking by and supporting me consistently, even when I am not at my best.
-
-(I hope I got it right with the twins' interviews! And the present...)
-
-Merry Christmas ❤️
-Jaime
+      <p>
+        Happy birthday! 42 looks good on you. I mean it — you keep getting
+        better, and somehow that still surprises me even after all this time.
       </p>
-    </main>
+
+      <p>
+        Watching you grow — at work, as a mom, just as a person — is one of my
+        favorite things. You set a high bar for yourself and then you clear it.
+        Every time. It's honestly a little annoying how good you are at it.
+      </p>
+
+      <p>
+        And José and Noelle — Lu, they hit the jackpot with you. The way you
+        show up for them every single day is something else. You're their
+        favorite person (sorry, not even close). We're all pretty lucky.
+      </p>
+
+      <p>
+        This gift is really just us — the twins and me — making sure you stick
+        around. We've talked about it and we're not okay with a world without
+        you, so please take care of yourself. Non-negotiable.
+      </p>
+
+      <p>
+        Here's to 42. Can't wait to celebrate you today.
+      </p>
+
+      <div class="signature">
+        <p>Con todo mi amor,</p>
+        <p class="sig-name">Jaime ❤️</p>
+      </div>
+    </div>
+
+    <div class="footer-ornament">✿ &nbsp; ✿ &nbsp; ✿</div>
   </body>
 </html>
